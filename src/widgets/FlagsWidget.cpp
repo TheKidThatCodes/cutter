@@ -268,12 +268,6 @@ void FlagsWidget::refreshFlags()
     flags_model->endResetModel();
 
     tree->showItemsNumber(flags_proxy_model->rowCount());
-
-    // TODO: this is not a very good place for the following:
-    QStringList flagNames;
-    for (const FlagDescription &i : flags_model->flags)
-        flagNames.append(i.name);
-    main->refreshOmniBar(flagNames);
 }
 
 void FlagsWidget::setScrollMode()
